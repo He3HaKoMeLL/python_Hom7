@@ -1,0 +1,30 @@
+from Class import *
+#
+# obje=student(input(),int(input()))
+#
+#
+# obje.complantet()
+# obje.compl()
+# obje.Vozrast()
+while True:
+    try:
+        pesinus_dog = pesinus(input('Какая кличка:\n'),input('какая порода:\n'),int(input('какого года:\n')))
+        pesinus_dog.complant()
+    except ValueError:
+        print('не выерный год')
+    if input('хочешь сыграть?').capitalize() =='Да':
+        print('Отлично тогда давай сыграем')
+        while True:
+            qwest = input('Дай команду Сидеть,Лежать,Дать лапу').capitalize()
+            if qwest == 'Дать лапу':
+                pesinus_dog.command()
+            elif qwest == 'Сидеть':
+                pesinus_dog.Sit()
+            elif qwest == 'Лежать':
+                pesinus_dog.lie_down()
+            if input('Еще сыграем? или ты пошел?').capitalize() != 'Еще':
+                break
+    else:
+        print('ну хорошо нет так нет')
+    if input('хочешь поменять кличку пса?').capitalize() =='Да':
+        pesinus_dog.nickname_dog()
