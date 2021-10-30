@@ -1,0 +1,39 @@
+import random
+class student():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def complant(self):
+        print('{} которому {} Сьел печеньки '.format(self.name, self.age))
+    def complantet(self):
+        print('{} которому {} не ел печеньки '.format(self.name, self.age))
+    def compl(self):
+        print('{} сядет на {} лет'.format(self.name,(random.randint(5,10))))
+    def Vozrast(self):
+        print('{} сядет на лет {} в 2023 будет {} '.format(self.name,self.age,self.age+2))
+
+
+class pesinus():
+    def __init__(self, nickname, breed, birthday):
+        self.name = nickname
+        self.breed = breed
+        self.birthday = birthday
+    def complant(self):
+        print('Пёс {} породы {} и ей {} год'.format(self.name, self.breed, 2021-self.birthday))
+    # КОманды для пса
+    # Команда 1 дать лапу
+    def command(self):
+            print('{} дал лапу'.format(self.name, self.breed))
+    # Команда 2 дать Сидеть
+    def Sit(self):
+        print('{} Сел'.format(self.name))
+    # Команда 3 лечь
+    def lie_down(self):
+        print('{} Лег'.format(self.name, self.breed))
+# ***********************************************************************
+    def nickname_dog(self):
+        print('Пес по кличке {} породы {}.'.format(self.name, self.breed,))
+        self.name = input('Введи имя самбака:')
+        print(' Теперь новая кличка пса {}'.format(self.name))
+
+
