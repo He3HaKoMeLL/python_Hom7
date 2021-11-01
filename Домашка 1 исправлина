@@ -1,0 +1,52 @@
+while True:
+    print('Здравствуй меня зовут Дятя Петя')  # вывод текста
+    s = input('какого пола ты?').title()  # .title() для упрощеного поска не зависимо от прификса буквы
+    # ИГра муржская
+    if 'М' in s:  # in поиск по букве
+        print('Извини дальше нам не по пути!Но если хочешь давай по играем?')
+        h = input().title()
+        if h in 'Да':
+            print('тогда давай играть')
+        elif h in 'Нет':
+            print('тогда извини но больше помочь не чем не могу')
+        else:
+            try:
+                d = int(input('Види цифру\n'))
+                z = int(input('Види цифру\n'))
+            except ValueError:
+                print('Простите не верный символ')
+                if d < z:
+                    print('{} < {}'.format(d, z))
+                elif d > z:
+                    print('{} > {}'.format(d, z))
+                else:
+                    print('{} = {}'.format(d, z))
+    # Женская игры
+    elif 'Д' in s:  # in поиск по букве
+        print('Сколько тебе лет ')
+    elif 'Ж' in s:  # in поиск по букве
+        print('Ух ты и сколько лет вам ))) ')
+    else:
+        print('не верная информация')
+    # Уточнения личной информации Девушки
+    b = int(input())
+    if b < 18:
+        print('извини нам дальше не по пути')
+    else:
+        print('как вас зовут')
+        name_t = input().title()  # Имя приходит с заклавной буквы
+    # noinspection PyUnboundLocalVariable
+    print('{},очень приятно познакомиться,\n Давай сыграем в игру?'.format(name_t))
+    print(name_t, 'Напиши цифру 1')
+    x = int(input())
+    print(name_t, 'Напиши цифру 2')
+    y = int(input())
+    g = input("Знак (+,-,*,/): ")
+    if g == '+':
+        print('мой ответ', (x + y))
+    elif g == '-':
+        print('мой ответ', (x - y))
+    elif g == '*':
+        print('мой ответ', (x * y))
+    elif g == '/':
+        print('мой ответ', (x / y))
